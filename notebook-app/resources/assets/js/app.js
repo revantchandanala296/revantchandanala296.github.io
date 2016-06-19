@@ -7,27 +7,27 @@ myApp.config(['$stateProvider', '$urlRouterProvider',
     $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: 'pages/home.html',
+            templateUrl: 'www/pages/home.html',
             controller: 'HomeController'
         })
         .state('page2', {
             url:'/page-2',
-            templateUrl: 'pages/page2.html',
+            templateUrl: 'www/pages/page2.html',
             controller: 'PageTwoController'
         })
         .state('page3', {
             url: '/page-3',
-            templateUrl: 'pages/page3.html',
-            controller: 'PageThreeController'
+            templateUrl: 'www/pages/page3.html',
+            controller: 'www/PageThreeController'
         })
         .state('page4', {
             url: '/page-4',
-            templateUrl: 'pages/page4.html',
+            templateUrl: 'www/pages/page4.html',
             controller: 'PageFourController'
         })
         .state('page5',{
             url: '/page-5',
-            templateUrl: 'pages/page5.html',
+            templateUrl: 'www/pages/page5.html',
             controller: 'PageFiveController'
         });
 
