@@ -1,0 +1,214 @@
+///
+/// Enable layout debugging
+///
+/// @group Debug
+///
+/// @link http://pesticide.io/
+///
+$layout-debug-outline: false;
+$layout-debug-depth: false;
+
+
+
+
+
+///
+/// Enable Namespace visual debugging
+///
+/// @group Debug
+///
+/// @link http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+///
+$namespace-debug: false;
+
+
+
+
+
+///
+/// Highlight potentially broken, malformed or legacy (X)HTML
+///
+/// @group Debug
+///
+/// @link https://github.com/yahoo/debugCSS
+///
+$legacy-debug: false;
+
+
+
+
+
+///
+/// Shows the active media query in a label at the top right of page
+///
+/// @group Debug
+///
+$show-mq: true;
+
+
+
+
+
+///
+/// Sets the active theme name
+///
+/// @group Styling
+///
+/// @link https://smacss.com/book/type-theme
+///
+$theme: "default" !default;
+
+
+
+
+
+///
+/// Breakpoints for responsive design, any name/ pair can go here.
+/// <br>See `breakpoint` mixin under `Styling`
+///
+/// @group Site Styles
+///
+$breakpoints: (
+				"tablet"  : (min-width: 48em), // 768px
+				"laptop"  : (min-width: 62em), // 992px
+				"desktop" : (min-width: 75em)  // 1200px
+);
+
+
+
+
+
+///
+/// Base heading sizes, set in px and converted to rem with px fallback.
+///
+/// @group Site Styles
+///
+$headings : (
+				"h1" : 48px,
+				"h2" : 36px,
+				"h3" : 30px,
+				"h4" : 24px,
+				"h5" : 20px,
+				"h6" : 18px
+);
+$typecsset-h1-size: map-get($headings, "h1") !default;
+$typecsset-h2-size: map-get($headings, "h2") !default;
+$typecsset-h3-size: map-get($headings, "h3") !default;
+$typecsset-h4-size: map-get($headings, "h4") !default;
+$typecsset-h5-size: map-get($headings, "h5") !default;
+$typecsset-h6-size: map-get($headings, "h6") !default;
+
+// Would you like to show a baseline grid? This is handy during development.
+$typecsset-show-baseline: true;
+
+
+
+
+
+///
+/// Font Stacks
+/// <br>See `ff` mixin under `Styling`
+///
+/// @group Site Styles
+///
+$font-stacks : (
+				"Default Sans"  : ("source-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif),
+				"Default Serif" : ("source-serif-pro", Georgia, "Times New Roman", Times, serif),
+				"Monospace"     : ("source-code-pro","Inconsolata", "Menlo", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+				"Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+				Monaco, "Courier New", Courier, monospace),
+
+				"Helvetica"     : (Helvetica Neue, Helvetica, Roboto, Arial, sans-serif),
+				"Georgia"       : (Georgia, Cambria, Times New Roman, Times, serif),
+				"Lucida"        : (Lucida Grande, Tahoma, Verdana, Arial, sans-serif),
+);
+
+
+
+
+
+// Colors
+@import "helpers/crayola";     // Crayola crayons
+@import "helpers/pantone";     // Pantone Coated
+
+
+// Messages
+$c-message         : #f4ecbb !default;
+$c-important       : #dd0000 !default;
+$c-notice          : #6666bb !default;
+$c-success         : #5cb85c !default;
+$c-info            : #5bc0de !default;
+$c-warning         : #f0ad4e !default;
+$c-danger          : #d9534f !default;
+
+
+// Brand Colors - brandcolors.net
+$c-facebook        : #3b5998;
+$c-twitter         : #55acee;
+$c-g-plus          : #dd4b39;
+$c-youtube         : #cd201f;
+$c-pinterest       : #cc2127;
+$c-laravel         : #f55247;
+$c-rss             : #f26522;
+
+
+///
+/// Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
+/// <br>See `c` mixin under `Styling`
+///
+/// @group Site Styles
+///
+
+$wk-green: #66CC00;
+
+$site-colors : (
+				"main-bg" : $c-white,
+				"nav-bar" : $wk-green
+);
+
+
+
+
+
+///
+/// Sizes array for various dimensions
+/// <br>See `s` mixin to under `Styling`
+///
+/// @group Site Styles
+///
+$sizes: (
+				"main-content-width" : 75%,
+);
+
+
+
+
+
+///
+/// Various transitions, defined by usage name or by properties effected
+/// <br>See `trans` mixin under `Styling`
+///
+/// @group Site Styles
+///
+$transitions : (
+				"all"    : all 0.3s linear,
+				"border" : border 0.3s linear,
+				"width"  : width 0.5s ease-in-out,
+				"color"  : color 0.3s linear,
+);
+
+
+
+
+
+///
+/// Assigns stacking order to items from one place, assigned with meaningful names.
+/// <br>See `z` mixin under `Styling`
+///
+/// @group Site Styles
+///
+$z-layers: (
+				"main-container"     : 1,
+
+				"debug" : 1000,
+);

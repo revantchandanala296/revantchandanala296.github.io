@@ -1,0 +1,35 @@
+/// 
+/// Creates a new block selector using human-readable code
+/// 
+/// @group BEM
+/// 
+/// @link http://codepen.io/andersschmidt/thoughts/expressive-bem-with-sass-part-ii-a-first-draft-of-mixins/
+/// 
+/// @param {string | list} $name        - block to create
+/// @param {string}        $type [null] - adds a dash to the selector
+/// 
+/// @example scss
+/// // SCSS
+///  @include new('menu');
+///  @include new('menu', 'component')
+///  @include new('page', 'object')
+///  
+/// // CSS
+/// .menu {}
+/// .c-menu {}
+/// .o-page {}
+/// 
+@mixin new($name, $type: null) {
+	@at-root {
+		@if $type != null {
+			$namespace: str-slice($type, 0, 1);
+			.#{$namespace}-#{$name} {
+				@content;
+			}
+		} @else {
+			.#{$name} {
+				@content;
+			}
+		}
+	}
+}

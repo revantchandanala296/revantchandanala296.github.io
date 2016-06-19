@@ -1,0 +1,128 @@
+@charset "utf-8";
+// ===========================================================================================
+// Main Sass file
+//
+// Table of Contents:
+//
+//  01. Bower Components
+//  02. Libraries
+//  03. Base
+//  04. Layout
+//  05. Objects
+//  06. Components
+//  07. Pages
+//  08. Print
+//  09. Utility
+//  10. Shame
+// ===========================================================================================
+
+
+// ===========================================================================================
+// $Bower Components
+//
+// These files should generate no output, if they do they belong somewhere else. Add new bower
+// component paths to grunt/options/sass.js in the dev object
+// ===========================================================================================
+//@import
+//"../../../bower_components/bourbon/app/assets/stylesheets/bourbon",      // css mixins, helpful tools
+//"../../../bower_components/singularity/stylesheets/singularitygs",       // grid system
+//"../../../bower_components/compass-breakpoint/stylesheets/breakpoint";   // advanced media queries
+//"../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+
+
+// ===========================================================================================
+// $Libraries
+//
+// external libraries added via bower, .css copied to .scss so they can be included directly
+// in the compiled css, or overwritten by a custom component file
+// ===========================================================================================
+@import
+"helpers/helpers",              // custom mixins / functions / variables
+"vendor/font-awesome",          // icon font
+"vendor/normalize",             // normalize.css
+"vendor/normalize-opentype",    // allows fancy characters if supported
+"vendor/sweetalert";            // facy alert popups
+
+
+
+
+
+// ===========================================================================================
+// $Base
+//
+// generic base classes and styles, used to apply mq debug label and set up typoegraphy for a
+// vertical grid system
+// ===========================================================================================
+@import
+"base/base",                    // html5 boilerplate base css
+"base/mq-info" ;                 // active media query label
+//"base/typecsset";               // font sizing and vertical grid system
+
+
+
+
+
+// ===========================================================================================
+//  $Layout
+// ===========================================================================================
+@import
+"layout/base";
+
+
+
+
+
+// ===========================================================================================
+// $Objects
+// ===========================================================================================
+
+
+
+
+
+// ===========================================================================================
+// $Components
+// ===========================================================================================
+
+@import "components/page";
+
+
+
+// ===========================================================================================
+// $Pages
+// ===========================================================================================
+
+
+
+
+
+// ===========================================================================================
+// $Utility
+// ===========================================================================================
+@import "helpers/utility";              // clearfix, screenreader, debugging
+
+
+
+
+
+// ===========================================================================================
+// $Print
+// ===========================================================================================
+@import "base/print";                   // basic resets for printing
+
+
+
+
+
+// ===========================================================================================
+// $Shame
+// ===========================================================================================
+@import "shame";                        // shame file for hacks
+
+// ===========================================================================================
+// $ionic
+// ===========================================================================================
+                //ionic
+

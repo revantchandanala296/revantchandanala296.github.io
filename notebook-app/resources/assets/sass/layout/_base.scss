@@ -1,0 +1,48 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+
+//
+// "Lobotomized Owl selector"
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+//
+* + * {
+    margin-top: 1.5em;
+}
+
+
+// BEM Helpers example
+// @include new('menu', 'object') {
+// 	color: $c-greenblue;
+
+// 	@include if-its('open') {
+// 		color: $c-leatherjacket;
+// 	}
+
+// 	@include when('shrink') {
+// 		color: $c-sasquatchsocks;
+
+// 		@include if-its('open') {
+// 			color: $c-grannysmithapple;
+// 		}
+// 	}
+
+// 	@include has('title') {
+// 		color: $c-outrageousorange;
+
+// 		@include when('alt') {
+// 			color: $c-timberwolf;
+// 		}
+
+// 		@include when-inside('.sidebar') {
+// 			color: $c-vividviolet;
+
+// 			@include when('alt') {
+// 				color: $c-tealblue;
+// 			}
+// 		}
+// 	}
+// }
